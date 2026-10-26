@@ -1,0 +1,59 @@
+# === 密钥 / 敏感文件（绝不提交）===
+*.token
+*.key
+*.pem
+*.secret
+.env
+.env.*
+**/token*
+**/secret*
+*GH_TOKEN*
+
+# === 构建产物 ===
+bin/
+obj/
+[Ss]napshot/
+[Rr]elease/
+*.cache
+
+# === 原始 PCL2 二进制与只读参考源码 ===
+Plain Craft Launcher 2.exe
+pcl-2代码/
+
+# === 游戏数据与缓存（用户私有，体积大）===
+.minecraft/
+PCL/
+*.minecraft/
+natives/
+
+# === 日志与临时文件 ===
+*.log
+Log*.txt
+*.tmp
+*.temp
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === IDE / 用户设置 ===
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.idea/
+*.swp
+*~
+
+# === 依赖 NuGet（体积大，构建时还原）===
+packages/
+*.nupkg
+project.lock.json
+project.fragment.lock.json
+
+# === 构建工具 Roslyn（大体积，按需保留 Roslyn 编译器本体除外）===
+# 如需本地构建，Roslyn 编译器可通过构建脚本重新获取；首次提交保留最小集
+工具/roslyn/*.nupkg
+
+# === 调试产物 ===
+*.pdb

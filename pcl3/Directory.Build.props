@@ -1,0 +1,8 @@
+<Project>
+
+    <!-- PCL3 构建补丁：使用 NuGet 提供的 .NET Framework 参考程序集，避免依赖系统安装的 targeting pack -->
+    <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
+    </ItemGroup>
+
+</Project>
